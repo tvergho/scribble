@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "558488731015",
+    "firebase_url": "https://machine-learning-275920.firebaseio.com",
+    "project_id": "machine-learning-275920",
+    "storage_bucket": "machine-learning-275920.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558488731015:android:56a34716b76d41e5656722",
+        "android_client_info": {
+          "package_name": "edu.dartmouth.cs.scribble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558488731015-rddb4j58a6n5hb1a6r3kr0uu1j4vev8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe3IYPisPDn87JKlTvoPsgY1bRfHIT45k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558488731015-rddb4j58a6n5hb1a6r3kr0uu1j4vev8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

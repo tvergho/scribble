@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/guesses"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:paddingLeft="5dp"
+        android:text="@string/ui_guesses"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFE81C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/current_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/pangolin"
+            android:text="You are drawing:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/pangolin"
+            android:text="1:00"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/turn_box"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" />
+
+        <Button
+            android:id="@+id/leaderboard_button"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/turn_box"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="#1098F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pangolin"
+                android:text="@string/ui_turn"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/turn_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pangolin"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edit_pane"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#0D000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/black"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#000000"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/red"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:backgroundTint="#FF0000"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/black"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/orange"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:backgroundTint="#FFA800"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/red"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/yellow"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:backgroundTint="#FEFE04"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/orange"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/green"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#00FF00"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/black"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/blue"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#0000FF"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/green"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/purple"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#CC00FF"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/blue"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/brown"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#964B00"
+            android:stateListAnimator="@null"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/purple"
+            app:layout_constraintTop_toTopOf="@id/black"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/ic_pencil_alt_solid_1"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/eraser"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/ic_eraser_solid_1"
+            android:stateListAnimator="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit" />
+
+        <Button
+            android:id="@+id/trash"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/trash_button"
+            android:stateListAnimator="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#CCCCCC"
+        android:backgroundTint="#CCCCCC"
+        app:layout_constraintBottom_toTopOf="@id/edit_pane"
+        app:layout_constraintRight_toLeftOf="@id/guesses"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <FrameLayout
+        android:id="@+id/draw_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/edit_pane"
+        app:layout_constraintEnd_toStartOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <edu.dartmouth.cs.scribble.views.DrawingView
+            android:id="@+id/draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/guess_layout"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="invisible"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="@id/edit_pane"
+        app:layout_constraintEnd_toStartOf="@id/guess_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_pane">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/guess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:hint="@string/ui_enter_guess"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/guess_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="#FFE81C"
+        android:fontFamily="@font/pangolin"
+        android:stateListAnimator="@null"
+        android:text="@string/ui_guess"
+        android:textSize="18sp"
+        android:theme="@style/Theme.MaterialComponents"
+        android:visibility="invisible"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:includeFontPadding="false"
+        android:textAllCaps="false"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/guess_layout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/edit_pane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/guesses">
+
+        <ListView
+            android:id="@+id/guesses_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:divider="@null"
+            android:transcriptMode="alwaysScroll" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

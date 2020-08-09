@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Scribble</string>
+    <string name="ui_game_code">Enter game code</string>
+    <string name="ui_start_game">Start Game</string>
+    <string name="ui_turn">Turn</string>
+    <string name="ui_players">Players</string>
+    <string name="ui_add_ai">Add AI</string>
+    <string name="ui_enter_name">Enter your name</string>
+    <string name="ui_guesses">Guesses</string>
+    <string name="ui_enter_guess">Enter guess</string>
+    <string name="ui_guess">Guess</string>
+    <string name="dialog_title">Turn Results</string>
+    <string name="next_round">Next Round</string>
+    <string name="ui_results">Results</string>
+    <string name="leaderboard_title">Leaderboard</string>
+    <string name="close">Close</string>
+</resources>
